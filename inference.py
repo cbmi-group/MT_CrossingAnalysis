@@ -64,7 +64,7 @@ def segmentation(opts):
         for img_path in tqdm(img_list):
             img_name = os.path.split(img_path)[-1]
 
-            raw = cv2.imread(img_path, -1)
+            raw = cv2.imread(img_path, 0)
             h, w = raw.shape
             pre_raw = img_PreProc(raw, img_type)
 
